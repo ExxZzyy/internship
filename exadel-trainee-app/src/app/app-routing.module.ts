@@ -6,6 +6,13 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./models/login/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: 'coachProfile',
+    loadChildren: () =>
+      import('./models/coachProfile/coachProfile-routing.module').then(
+        (m) => m.CoachProfileRoutingModule,
+      ),
+  },
 ];
 
 @NgModule({
